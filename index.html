@@ -80,6 +80,35 @@
     }
     svg.diagram{ width:100%; height:auto; display:block; }
 
+    /* Card grid for carousel */
+    .card-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap:20px;
+    }
+    .carousel-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:24px;
+      text-align:center;
+    }
+    .carousel-card svg{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+    }
+    .carousel-card .label{
+      margin-top:12px;
+      font-size:14px;
+      font-weight:600;
+      color:var(--muted);
+    }
+    .carousel-card button{
+      margin-top:12px;
+    }
+
     /* Icon grid */
     .icon-grid{
       display:grid;
@@ -121,6 +150,7 @@
     <div class="wrap">
       <div class="title">CBO LP 図解素材</div>
       <div class="nav">
+        <a href="#cards">カルーセル用カード</a>
         <a href="#icons">アイコン素材</a>
         <a href="#painpoints">問題提起</a>
         <a href="#cause">原因の深掘り</a>
@@ -133,16 +163,106 @@
   <main>
     <div class="wrap">
 
+    <!-- Carousel Cards for STUDIO -->
+    <section id="cards">
+      <div class="sec-h">
+        <h2>カルーセル用カード（STUDIO用・モバイル対応）</h2>
+      </div>
+      <div class="sec-b">
+        <p style="color:var(--muted);font-size:14px;margin:0 0 20px;">STUDIOのカルーセルに使う用。各カードをダウンロードして画像として配置してください。</p>
+        <div class="card-grid">
+
+          <!-- Card 1: 職人手配 -->
+          <div class="carousel-card">
+            <svg id="card-1" viewBox="0 0 300 360" role="img">
+              <rect width="300" height="360" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+              <circle cx="150" cy="80" r="50" fill="#0f766e" opacity="0.1"/>
+              <g transform="translate(120,50)">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.5)"/>
+                <circle cx="22.5" cy="17.5" r="10" fill="none" stroke="#0f766e" stroke-width="2.5"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.5) translate(-13,-10)"/>
+              </g>
+              <text x="150" y="170" text-anchor="middle" font-size="28" font-weight="800" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">職人手配</text>
+              <text x="150" y="205" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">に時間が取られる</text>
+              <line x1="50" y1="235" x2="250" y2="235" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="150" y="280" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">調整・連絡・変更対応が</text>
+              <text x="150" y="310" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">積み上がる</text>
+            </svg>
+            <div class="label">1. 職人手配</div>
+            <button class="btn btn-sm" onclick="downloadCard('card-1','card-shokunin.svg')">保存</button>
+          </div>
+
+          <!-- Card 2: 進捗管理 -->
+          <div class="carousel-card">
+            <svg id="card-2" viewBox="0 0 300 360" role="img">
+              <rect width="300" height="360" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+              <circle cx="150" cy="80" r="50" fill="#0f766e" opacity="0.1"/>
+              <g transform="translate(115,45)">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+              </g>
+              <text x="150" y="170" text-anchor="middle" font-size="28" font-weight="800" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">進捗管理</text>
+              <text x="150" y="205" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">が大変</text>
+              <line x1="50" y1="235" x2="250" y2="235" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="150" y="280" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">状況確認のために</text>
+              <text x="150" y="310" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">「探す・聞く」が発生</text>
+            </svg>
+            <div class="label">2. 進捗管理</div>
+            <button class="btn btn-sm" onclick="downloadCard('card-2','card-shinchoku.svg')">保存</button>
+          </div>
+
+          <!-- Card 3: 集計 -->
+          <div class="carousel-card">
+            <svg id="card-3" viewBox="0 0 300 360" role="img">
+              <rect width="300" height="360" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+              <circle cx="150" cy="80" r="50" fill="#0f766e" opacity="0.1"/>
+              <g transform="translate(115,45)">
+                <path d="M3 3v18h18" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+                <path d="M18 17V9" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+                <path d="M13 17V5" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+                <path d="M8 17v-3" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+              </g>
+              <text x="150" y="170" text-anchor="middle" font-size="28" font-weight="800" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">集計</text>
+              <text x="150" y="205" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">が毎回たいへん</text>
+              <line x1="50" y1="235" x2="250" y2="235" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="150" y="280" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">Excel更新・手集計で</text>
+              <text x="150" y="310" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">時間が溶ける</text>
+            </svg>
+            <div class="label">3. 集計</div>
+            <button class="btn btn-sm" onclick="downloadCard('card-3','card-shukei.svg')">保存</button>
+          </div>
+
+          <!-- Card 4: 請求 -->
+          <div class="carousel-card">
+            <svg id="card-4" viewBox="0 0 300 360" role="img">
+              <rect width="300" height="360" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+              <circle cx="150" cy="80" r="50" fill="#0f766e" opacity="0.1"/>
+              <g transform="translate(115,45)">
+                <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+                <path d="M12 17V7" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="scale(2.8)"/>
+              </g>
+              <text x="150" y="170" text-anchor="middle" font-size="28" font-weight="800" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">請求</text>
+              <text x="150" y="205" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a" font-family="Hiragino Kaku Gothic ProN, sans-serif">の抜け漏れが不安</text>
+              <line x1="50" y1="235" x2="250" y2="235" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="150" y="280" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">どこまで請求したか</text>
+              <text x="150" y="310" text-anchor="middle" font-size="15" fill="#64748b" font-family="Hiragino Kaku Gothic ProN, sans-serif">追いにくい</text>
+            </svg>
+            <div class="label">4. 請求</div>
+            <button class="btn btn-sm" onclick="downloadCard('card-4','card-seikyu.svg')">保存</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Icons for STUDIO -->
     <section id="icons">
       <div class="sec-h">
-        <h2>アイコン素材（STUDIO用・個別ダウンロード）</h2>
+        <h2>アイコン素材（個別ダウンロード）</h2>
       </div>
       <div class="sec-b">
-        <p style="color:var(--muted);font-size:14px;margin:0 0 20px;">クリックでSVGをダウンロード。STUDIOに画像としてアップしてください。</p>
+        <p style="color:var(--muted);font-size:14px;margin:0 0 20px;">アイコンだけ使いたい場合はこちら。</p>
         <div class="icon-grid">
 
-          <!-- 職人手配 -->
           <div class="icon-card">
             <svg id="ico-users" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
@@ -154,7 +274,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-users','icon-users.svg')">保存</button>
           </div>
 
-          <!-- 進捗管理 -->
           <div class="icon-card">
             <svg id="ico-message" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -163,7 +282,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-message','icon-message.svg')">保存</button>
           </div>
 
-          <!-- 集計 -->
           <div class="icon-card">
             <svg id="ico-chart" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 3v18h18"/>
@@ -175,7 +293,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-chart','icon-chart.svg')">保存</button>
           </div>
 
-          <!-- 請求 -->
           <div class="icon-card">
             <svg id="ico-receipt" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/>
@@ -186,49 +303,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-receipt','icon-receipt.svg')">保存</button>
           </div>
 
-          <!-- 案件発生 -->
-          <div class="icon-card">
-            <svg id="ico-folder" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-              <line x1="12" y1="11" x2="12" y2="17"/>
-              <line x1="9" y1="14" x2="15" y2="14"/>
-            </svg>
-            <div class="name">案件発生</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-folder','icon-folder.svg')">保存</button>
-          </div>
-
-          <!-- 入金 -->
-          <div class="icon-card">
-            <svg id="ico-money" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
-              <path d="M12 18V6"/>
-            </svg>
-            <div class="name">入金</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-money','icon-money.svg')">保存</button>
-          </div>
-
-          <!-- ユーザー -->
-          <div class="icon-card">
-            <svg id="ico-user" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-            <div class="name">ユーザー</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-user','icon-user.svg')">保存</button>
-          </div>
-
-          <!-- 時計 -->
-          <div class="icon-card">
-            <svg id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            <div class="name">時間ロス</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-clock','icon-clock.svg')">保存</button>
-          </div>
-
-          <!-- チェック -->
           <div class="icon-card">
             <svg id="ico-check" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"/>
@@ -237,7 +311,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-check','icon-check.svg')">保存</button>
           </div>
 
-          <!-- バツ -->
           <div class="icon-card">
             <svg id="ico-x" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"/>
@@ -247,7 +320,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-x','icon-x.svg')">保存</button>
           </div>
 
-          <!-- 見える化 -->
           <div class="icon-card">
             <svg id="ico-eye" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -257,7 +329,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-eye','icon-eye.svg')">保存</button>
           </div>
 
-          <!-- スマホ -->
           <div class="icon-card">
             <svg id="ico-smartphone" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
@@ -267,7 +338,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-smartphone','icon-smartphone.svg')">保存</button>
           </div>
 
-          <!-- 自動化 -->
           <div class="icon-card">
             <svg id="ico-zap" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -276,7 +346,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-zap','icon-zap.svg')">保存</button>
           </div>
 
-          <!-- 矢印 -->
           <div class="icon-card">
             <svg id="ico-arrow" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"/>
@@ -286,29 +355,6 @@
             <button class="btn btn-sm" onclick="downloadIcon('ico-arrow','icon-arrow.svg')">保存</button>
           </div>
 
-          <!-- クリップボード -->
-          <div class="icon-card">
-            <svg id="ico-clipboard" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-              <path d="M9 14l2 2 4-4"/>
-            </svg>
-            <div class="name">進捗チェック</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-clipboard','icon-clipboard.svg')">保存</button>
-          </div>
-
-          <!-- ファイル -->
-          <div class="icon-card">
-            <svg id="ico-file" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
-            <div class="name">請求書</div>
-            <button class="btn btn-sm" onclick="downloadIcon('ico-file','icon-file.svg')">保存</button>
-          </div>
-
         </div>
       </div>
     </section>
@@ -316,7 +362,7 @@
     <!-- 1) Problem / Pain points -->
     <section id="painpoints">
       <div class="sec-h">
-        <h2>問題提起：こんなことで時間を取られていませんか？</h2>
+        <h2>問題提起：こんなことで時間を取られていませんか？（PC用）</h2>
         <button class="btn" onclick="downloadSvg('svg-painpoints','cbo-painpoints.svg')">SVGを保存</button>
       </div>
       <div class="sec-b">
@@ -767,6 +813,29 @@
       clone.setAttribute("xmlns","http://www.w3.org/2000/svg");
       clone.setAttribute("width","48");
       clone.setAttribute("height","48");
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(clone);
+      if(!source.match(/^<\?xml/)){
+        source = '<?xml version="1.0" encoding="UTF-8"?>\n' + source;
+      }
+      const blob = new Blob([source], {type: "image/svg+xml;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url), 1000);
+    }
+
+    function downloadCard(svgId, filename){
+      const svg = document.getElementById(svgId);
+      if(!svg) return;
+      const clone = svg.cloneNode(true);
+      clone.setAttribute("xmlns","http://www.w3.org/2000/svg");
+      clone.setAttribute("width","300");
+      clone.setAttribute("height","360");
       const serializer = new XMLSerializer();
       let source = serializer.serializeToString(clone);
       if(!source.match(/^<\?xml/)){

@@ -18,6 +18,7 @@
     html,body{
       width:100%;
       min-height:100%;
+      overflow-x:hidden;
     }
     body{
       font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", -apple-system, sans-serif;
@@ -176,6 +177,56 @@
       font-size:11px;
       font-weight:600;
       color:var(--muted);
+    }
+
+    /* Small screen (iPhone SE etc.) */
+    @media (max-width: 380px) {
+      .container{
+        padding:32px 16px 48px;
+      }
+      .header h1{
+        font-size:22px;
+      }
+      .header p{
+        font-size:13px;
+      }
+      .reason-card{
+        padding:24px 16px;
+      }
+      .reason-header{
+        gap:12px;
+      }
+      .reason-icon{
+        width:48px;
+        height:48px;
+        border-radius:12px;
+      }
+      .reason-icon svg{
+        width:24px;
+        height:24px;
+      }
+      .reason-title{
+        font-size:18px;
+      }
+      .reason-subtitle{
+        font-size:12px;
+      }
+      .reason-body{
+        font-size:13px;
+      }
+      .illustration{
+        padding:12px;
+        overflow-x:auto;
+      }
+      .illustration svg{
+        min-width:280px;
+      }
+      .photo-item{
+        width:120px;
+      }
+      .photo-item img{
+        height:75px;
+      }
     }
   </style>
 </head>

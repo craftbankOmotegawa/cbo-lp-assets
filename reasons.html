@@ -179,16 +179,16 @@
       color:var(--muted);
     }
 
-    /* Small screen (iPhone SE etc.) */
-    @media (max-width: 380px) {
+    /* Mobile screens */
+    @media (max-width: 480px) {
       .container{
         padding:32px 16px 48px;
       }
       .header h1{
-        font-size:22px;
+        font-size:24px;
       }
       .header p{
-        font-size:13px;
+        font-size:14px;
       }
       .reason-card{
         padding:24px 16px;
@@ -206,7 +206,7 @@
         height:24px;
       }
       .reason-title{
-        font-size:18px;
+        font-size:19px;
       }
       .reason-subtitle{
         font-size:12px;
@@ -215,17 +215,43 @@
         font-size:13px;
       }
       .illustration{
-        padding:12px;
+        padding:10px;
+        margin-left:-16px;
+        margin-right:-16px;
+        border-radius:0;
         overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
       }
       .illustration svg{
-        min-width:280px;
+        width:300px;
+        min-width:300px;
+        margin:0 auto;
+        display:block;
       }
       .photo-item{
-        width:120px;
+        width:130px;
       }
       .photo-item img{
-        height:75px;
+        height:80px;
+      }
+    }
+
+    /* Very small screen (iPhone SE etc.) */
+    @media (max-width: 380px) {
+      .header h1{
+        font-size:20px;
+      }
+      .header p{
+        font-size:13px;
+      }
+      .reason-title{
+        font-size:17px;
+      }
+      .photo-item{
+        width:110px;
+      }
+      .photo-item img{
+        height:70px;
       }
     }
   </style>

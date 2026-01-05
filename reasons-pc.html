@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>クラフトバンクオフィスを使いこなせる3つの理由（PC版）</title>
+  <style>
+    :root{
+      --brand:#0f766e;
+      --brand-light:#14b8a6;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --bg:#f8fafc;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{
+      width:100%;
+      min-height:100%;
+    }
+    body{
+      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", -apple-system, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:64px 40px 80px;
+    }
+
+    /* Header */
+    .header{
+      text-align:center;
+      margin-bottom:56px;
+    }
+    .header::before{
+      content:'';
+      display:block;
+      width:80px;
+      height:5px;
+      background:linear-gradient(90deg, var(--brand), var(--brand-light));
+      margin:0 auto 36px;
+      border-radius:3px;
+    }
+    .header h1{
+      font-size:36px;
+      font-weight:800;
+      line-height:1.4;
+      margin-bottom:24px;
+      color:var(--ink);
+    }
+    .header p{
+      font-size:17px;
+      color:var(--muted);
+      line-height:1.8;
+      max-width:700px;
+      margin:0 auto;
+    }
+
+    /* Reason Cards Grid */
+    .reasons{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:28px;
+    }
+    .reason-card{
+      background:var(--card);
+      border-radius:20px;
+      padding:36px 28px;
+      border-left:5px solid var(--brand);
+      box-shadow:0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .reason-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .reason-card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-5px;
+      width:calc(100% + 5px);
+      height:100%;
+      border-radius:20px;
+      background:linear-gradient(90deg, rgba(15,118,110,0.03), transparent);
+      pointer-events:none;
+    }
+
+    .reason-icon{
+      width:64px;
+      height:64px;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(15,118,110,0.12), rgba(20,184,166,0.08));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:20px;
+    }
+    .reason-icon svg{
+      width:32px;
+      height:32px;
+      stroke:var(--brand);
+    }
+    .reason-number{
+      font-size:14px;
+      font-weight:700;
+      color:var(--brand);
+      margin-bottom:8px;
+      letter-spacing:0.08em;
+    }
+    .reason-title{
+      font-size:24px;
+      font-weight:800;
+      color:var(--ink);
+      line-height:1.35;
+      margin-bottom:8px;
+    }
+    .reason-subtitle{
+      font-size:14px;
+      font-weight:600;
+      color:var(--brand);
+      margin-bottom:16px;
+    }
+    .reason-body{
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.9;
+      flex:1;
+    }
+
+    /* Illustration area */
+    .illustration{
+      margin-top:20px;
+      background:#f8fafc;
+      border-radius:10px;
+      padding:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .illustration svg{
+      width:100%;
+      max-width:280px;
+      height:auto;
+      display:block;
+    }
+
+    /* Photo gallery */
+    .photo-gallery{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .photo-gallery .photo-item:first-child{
+      grid-column:1 / -1;
+    }
+    .photo-item{
+      text-align:center;
+    }
+    .photo-item img{
+      width:100%;
+      height:80px;
+      object-fit:cover;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .photo-gallery .photo-item:first-child img{
+      height:100px;
+    }
+    .photo-label{
+      display:block;
+      margin-top:6px;
+      font-size:10px;
+      font-weight:600;
+      color:var(--muted);
+    }
+
+    @media (max-width: 1024px) {
+      .reasons{
+        grid-template-columns:1fr;
+        max-width:600px;
+        margin:0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>「クラフトバンクオフィス」を使いこなせる3つの理由</h1>
+      <p>導入しただけで終わらず、現場の職人さんまでしっかり使い続けてもらえる——。<br>クラフトバンクオフィスが選ばれ続けている3つの理由をご紹介します。</p>
+    </div>
+
+    <div class="reasons">
+
+      <!-- Reason 01: LINE連携 -->
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </div>
+        <div class="reason-number">01</div>
+        <div class="reason-title">LINEと完全連携</div>
+        <div class="reason-subtitle">※LINE WORKSとの連携も可能</div>
+        <div class="reason-body">
+          LINEのアカウントで認証するため、ID・パスワード入力の煩わしいログイン作業が不要です。<br><br>
+          また、日報入力や打刻の依頼、現場の担当変更などを自動通知するため、通知が来たらアクションするだけで利用できます。
+        </div>
+        <div class="illustration">
+          <svg viewBox="0 0 260 90" role="img">
+            <!-- Phone with LINE -->
+            <g transform="translate(0, 0)">
+              <rect width="52" height="80" rx="8" fill="#fff" stroke="#d1d5db" stroke-width="1"/>
+              <rect width="52" height="18" rx="8" fill="#06c755"/>
+              <rect y="10" width="52" height="8" fill="#06c755"/>
+              <text x="26" y="13" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">LINE</text>
+              <circle cx="26" cy="48" r="12" fill="#06c755" opacity="0.12"/>
+              <path d="M20 48 L24 52 L32 44" stroke="#06c755" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <text x="26" y="72" text-anchor="middle" font-size="6" fill="#64748b">認証OK</text>
+            </g>
+
+            <!-- Arrow -->
+            <path d="M58 40 L72 40" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/>
+            <polygon points="72,40 66,36 66,44" fill="#0f766e"/>
+
+            <!-- Notification panel -->
+            <g transform="translate(80, 0)">
+              <rect width="110" height="80" rx="8" fill="#fff" stroke="#0f766e" stroke-width="1.5"/>
+              <rect width="110" height="18" rx="8" fill="#0f766e"/>
+              <rect y="10" width="110" height="8" fill="#0f766e"/>
+              <text x="55" y="13" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">自動通知</text>
+              <g transform="translate(6, 24)">
+                <rect width="98" height="16" rx="4" fill="#0f766e" opacity="0.08"/>
+                <circle cx="10" cy="8" r="5" fill="#22c55e"/>
+                <text x="20" y="11" font-size="7" fill="#0f172a">打刻依頼</text>
+              </g>
+              <g transform="translate(6, 44)">
+                <rect width="98" height="16" rx="4" fill="#0f766e" opacity="0.08"/>
+                <circle cx="10" cy="8" r="5" fill="#14b8a6"/>
+                <text x="20" y="11" font-size="7" fill="#0f172a">担当変更</text>
+              </g>
+              <text x="55" y="72" text-anchor="middle" font-size="6" fill="#64748b">通知が届く</text>
+            </g>
+
+            <!-- Arrow -->
+            <path d="M196 40 L210 40" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/>
+            <polygon points="210,40 204,36 204,44" fill="#0f766e"/>
+
+            <!-- Action -->
+            <g transform="translate(216, 15)">
+              <rect width="44" height="50" rx="8" fill="#22c55e"/>
+              <path d="M16 25 L20 29 L28 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <text x="22" y="42" text-anchor="middle" font-size="6" fill="#fff" font-weight="600">完了</text>
+            </g>
+            <text x="238" y="78" text-anchor="middle" font-size="6" fill="#64748b">即アクション</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Reason 02: 今の運用をそのまま再現 -->
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </div>
+        <div class="reason-number">02</div>
+        <div class="reason-title">今の運用を<br>そのまま再現</div>
+        <div class="reason-subtitle"></div>
+        <div class="reason-body">
+          いま行っている業務のやり方をヒアリングし、お客様の運用に合わせてサービスをフルカスタマイズします。<br><br>
+          試用・改善の繰り返しにより、今の運用を細かく再現できます。
+        </div>
+        <div class="illustration">
+          <svg viewBox="0 0 260 90" role="img">
+            <!-- Current workflow -->
+            <g transform="translate(0, 0)">
+              <rect width="80" height="85" rx="8" fill="#fff" stroke="#d1d5db" stroke-width="1"/>
+              <text x="40" y="14" text-anchor="middle" font-size="7" fill="#64748b" font-weight="600">今の運用</text>
+              <rect x="6" y="22" width="68" height="16" rx="4" fill="#fef3c7" stroke="#fbbf24" stroke-width="0.5"/>
+              <text x="40" y="33" text-anchor="middle" font-size="7" fill="#92400e">Excel</text>
+              <rect x="6" y="42" width="68" height="16" rx="4" fill="#e0f2fe" stroke="#38bdf8" stroke-width="0.5"/>
+              <text x="40" y="53" text-anchor="middle" font-size="7" fill="#0369a1">LINE</text>
+              <rect x="6" y="62" width="68" height="16" rx="4" fill="#fce7f3" stroke="#f472b6" stroke-width="0.5"/>
+              <text x="40" y="73" text-anchor="middle" font-size="7" fill="#be185d">紙</text>
+            </g>
+
+            <!-- Arrow -->
+            <g transform="translate(88, 32)">
+              <text x="16" y="0" text-anchor="middle" font-size="6" fill="#0f766e" font-weight="600">ヒアリング</text>
+              <path d="M0 12 L24 12" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/>
+              <polygon points="24,12 18,8 18,16" fill="#0f766e"/>
+            </g>
+
+            <!-- CBO -->
+            <g transform="translate(120, 0)">
+              <rect width="140" height="85" rx="8" fill="#fff" stroke="#0f766e" stroke-width="1.5"/>
+              <rect width="140" height="18" rx="8" fill="#0f766e"/>
+              <rect y="10" width="140" height="8" fill="#0f766e"/>
+              <text x="70" y="13" text-anchor="middle" font-size="6" fill="#fff" font-weight="700">クラフトバンクオフィスで再現</text>
+              <g transform="translate(6, 24)">
+                <rect width="128" height="16" rx="4" fill="#0f766e" opacity="0.08"/>
+                <circle cx="10" cy="8" r="5" fill="#22c55e"/>
+                <path d="M7 8 L9 10 L13 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <text x="20" y="11" font-size="7" fill="#0f172a">一覧で見える化</text>
+              </g>
+              <g transform="translate(6, 44)">
+                <rect width="128" height="16" rx="4" fill="#0f766e" opacity="0.08"/>
+                <circle cx="10" cy="8" r="5" fill="#22c55e"/>
+                <path d="M7 8 L9 10 L13 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <text x="20" y="11" font-size="7" fill="#0f172a">LINE通知</text>
+              </g>
+              <g transform="translate(6, 64)">
+                <rect width="128" height="16" rx="4" fill="#0f766e" opacity="0.08"/>
+                <circle cx="10" cy="8" r="5" fill="#22c55e"/>
+                <path d="M7 8 L9 10 L13 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <text x="20" y="11" font-size="7" fill="#0f172a">スマホで日報</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Reason 03: 導入は対面で徹底支援 -->
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="reason-number">03</div>
+        <div class="reason-title">導入は対面で<br>徹底支援</div>
+        <div class="reason-subtitle"></div>
+        <div class="reason-body">
+          導入期間はお客様先に直接訪問し、徹底的にサポート。<br><br>
+          職人向けの説明会もクラフトバンクが主導して行い、デジタル化が苦手な方を個別にフォローします。
+        </div>
+        <div class="photo-gallery">
+          <div class="photo-item">
+            <img src="導入支援1.png" alt="職人さんへの説明会の様子">
+            <span class="photo-label">職人向け説明会</span>
+          </div>
+          <div class="photo-item">
+            <img src="導入支援2.png" alt="お客様先での導入サポート">
+            <span class="photo-label">導入サポート</span>
+          </div>
+          <div class="photo-item">
+            <img src="導入支援3.png" alt="個別フォローの様子">
+            <span class="photo-label">個別フォロー</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

@@ -17,6 +17,7 @@
     *{box-sizing:border-box;margin:0;padding:0;}
     html,body{
       width:100%;
+      max-width:100%;
       min-height:100%;
       overflow-x:hidden;
     }
@@ -27,9 +28,10 @@
       line-height:1.7;
     }
     .container{
+      width:100%;
       max-width:640px;
       margin:0 auto;
-      padding:48px 24px 64px;
+      padding:48px 5% 64px;
     }
 
     /* Header */
@@ -68,10 +70,11 @@
     .reason-card{
       background:var(--card);
       border-radius:16px;
-      padding:32px 24px;
+      padding:8% 5%;
       border-left:4px solid var(--brand);
       box-shadow:0 1px 3px rgba(0,0,0,0.04);
       position:relative;
+      overflow:hidden;
     }
     .reason-card::before{
       content:'';
@@ -139,14 +142,13 @@
       margin-top:20px;
       background:#f8fafc;
       border-radius:10px;
-      padding:16px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      padding:4%;
+      width:100%;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
     }
     .illustration svg{
       width:100%;
-      max-width:320px;
       height:auto;
       display:block;
     }
@@ -182,76 +184,48 @@
     /* Mobile screens */
     @media (max-width: 480px) {
       .container{
-        padding:32px 16px 48px;
+        padding:32px 4% 48px;
       }
       .header h1{
-        font-size:24px;
+        font-size:6vw;
       }
       .header p{
-        font-size:14px;
+        font-size:3.5vw;
       }
       .reason-card{
-        padding:24px 16px;
+        padding:6% 4%;
       }
       .reason-header{
-        gap:12px;
+        gap:10px;
       }
       .reason-icon{
-        width:48px;
-        height:48px;
-        border-radius:12px;
+        width:44px;
+        height:44px;
+        border-radius:10px;
+        flex-shrink:0;
       }
       .reason-icon svg{
-        width:24px;
-        height:24px;
+        width:22px;
+        height:22px;
       }
       .reason-title{
-        font-size:19px;
+        font-size:5vw;
       }
       .reason-subtitle{
-        font-size:12px;
+        font-size:3vw;
       }
       .reason-body{
-        font-size:13px;
-      }
-      .illustration{
-        padding:10px;
-        margin-left:-16px;
-        margin-right:-16px;
-        border-radius:0;
-        overflow-x:auto;
-        -webkit-overflow-scrolling:touch;
-      }
-      .illustration svg{
-        width:300px;
-        min-width:300px;
-        margin:0 auto;
-        display:block;
+        font-size:3.5vw;
       }
       .photo-item{
-        width:130px;
-      }
-      .photo-item img{
-        height:80px;
-      }
-    }
-
-    /* Very small screen (iPhone SE etc.) */
-    @media (max-width: 380px) {
-      .header h1{
-        font-size:20px;
-      }
-      .header p{
-        font-size:13px;
-      }
-      .reason-title{
-        font-size:17px;
-      }
-      .photo-item{
-        width:110px;
+        width:35%;
+        flex-shrink:0;
       }
       .photo-item img{
         height:70px;
+      }
+      .photo-label{
+        font-size:2.8vw;
       }
     }
   </style>

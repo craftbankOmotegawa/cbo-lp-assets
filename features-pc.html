@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PC版｜主な機能一覧</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", -apple-system, sans-serif;
+      background:#f8fafc;
+      line-height:1.6;
+      color:#0f172a;
+    }
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:0 auto;
+      padding:40px 24px;
+    }
+    .section-header{
+      text-align:center;
+      margin-bottom:32px;
+    }
+    .section-label{
+      display:inline-block;
+      background:#0f766e;
+      color:#fff;
+      font-size:18px;
+      font-weight:700;
+      padding:10px 32px;
+      border-radius:4px;
+    }
+
+    /* Grid layout */
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .card{
+      background:#fff;
+      border:2px solid #0f766e;
+      border-radius:16px;
+      overflow:hidden;
+      transition:transform 0.2s, box-shadow 0.2s;
+      display:flex;
+      flex-direction:column;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(15,118,110,0.15);
+    }
+    .card-header{
+      background:#0f766e;
+      color:#fff;
+      text-align:center;
+      padding:14px 16px;
+    }
+    .card-title{
+      font-size:18px;
+      font-weight:800;
+    }
+    .card-body{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    .card-desc{
+      font-size:14px;
+      color:#334155;
+      line-height:1.8;
+      flex-shrink:0;
+    }
+    .card-image-wrapper{
+      flex:1;
+      display:flex;
+      align-items:flex-end;
+      margin-top:16px;
+    }
+    .card-image{
+      width:100%;
+      border-radius:8px;
+      border:1px solid #e2e8f0;
+      overflow:hidden;
+    }
+    .card-image img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Special card: 各種書類管理 */
+    .document-table-wrapper{
+      flex:1;
+      display:flex;
+      align-items:flex-end;
+      margin-top:16px;
+    }
+    .document-table{
+      width:100%;
+      background:#fff;
+      border:2px solid #0f766e;
+      border-radius:8px;
+      overflow:hidden;
+    }
+    .document-table-header{
+      background:#0f766e;
+      color:#fff;
+      text-align:center;
+      padding:10px;
+      font-size:14px;
+      font-weight:700;
+    }
+    .document-table-body{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+    }
+    .document-table-cell{
+      padding:12px;
+      text-align:center;
+      font-size:14px;
+      font-weight:600;
+      border:1px solid #e2e8f0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .features-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .features-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">主な機能一覧</span>
+    </div>
+
+    <div class="features-grid">
+      <!-- Card 1: ホワイトボード -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">ホワイトボード</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">ホワイトボードのようにスケジュールを管理できます。予定登録すると職人にLINEで自動通知されます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-whiteboard.png" alt="ホワイトボード機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: 車両・道工具管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">車両・道工具管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">車両や重機、道具の利用予約が可能です。現場ごとの手配状況や、日別・月別の利用状況も確認できます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-vehicle.png" alt="車両・道工具管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: 日報作成 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">日報作成</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">スマホで日報作成でき、紙の記入・提出が不要になります。LINEによる自動通知で提出忘れも防げます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-daily-report.png" alt="日報作成機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: 写真・文書管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">写真・文書管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">写真や指示書ファイルなどを案件ごとにフォルダ分けして管理できます。容量制限はありません。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-photo.png" alt="写真・文書管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: 打刻・休暇管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">打刻・休暇管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">スマホから打刻と位置情報の取得ができます。休暇管理やワークフローによる勤怠の申請・承認も可能です。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-attendance.png" alt="打刻・休暇管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: 勤怠集計 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">勤怠集計</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">勤怠情報を自動集計して一覧表を自動作成するため、集計の手間がゼロになります。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-attendance-summary.png" alt="勤怠集計機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7: 顧客管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">顧客管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">担当者情報や支払サイト、元請別の売上・粗利管理など、顧客情報を一元管理し、効率的な営業をサポート。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-customer.png" alt="顧客管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8: 案件管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">案件管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">案件ごとに、営業段階から施工、完工までの情報を一元管理でき、自由にリストアップできます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-project.png" alt="案件管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9: 各種書類管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">各種書類管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">項目を選ぶだけで各種書類が自動作成されます。サービス上でメール送信も可能です。</p>
+          <div class="document-table-wrapper">
+            <div class="document-table">
+              <div class="document-table-header">作成可能な書類</div>
+              <div class="document-table-body">
+                <div class="document-table-cell">見積書</div>
+                <div class="document-table-cell">請求書</div>
+                <div class="document-table-cell">発注書</div>
+                <div class="document-table-cell">支払明細書</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10: 原価管理 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">原価管理</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">労務費や材料費、経費などの情報が原価として自動集計されるため、リアルタイムに粗利を把握できます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-cost.png" alt="原価管理機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11: 作業報告書 -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">作業報告書</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">顧客名や案件名を選択するだけで、日報で報告された写真を活用した作業報告書を簡単に作成できます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-work-report.png" alt="作業報告書機能">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12: 経営レポート -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">経営レポート</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">案件ごとの収支や、売上推移などの経営情報がいつでもリアルタイムで確認できます。</p>
+          <div class="card-image-wrapper">
+            <div class="card-image">
+              <img src="https://craftbankomotegawa.github.io/cbo-lp-assets/images/feature-report.png" alt="経営レポート機能">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
